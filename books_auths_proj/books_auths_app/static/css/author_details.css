@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px dotted rgb(234, 0, 255); */
+}
+
+.auth-details-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-top: 145px;
+    margin-left: 45px;
+}
+
+.auth-title {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.id-auth {
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+
+}
+
+span {
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.desc-wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+textarea {
+    margin-left: 10px;
+}
+
+.book {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 25px;
+    margin-bottom: 3px;
+}
+
+selected-book {
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    margin: 0 0 0 25px;
+}

@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px dotted rgb(234, 0, 255); */
+}
+
+.add-author-wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 175px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  font-size: 45px;
+  margin-bottom: 15px;
+
+}
+
+#first-name, #last-name {
+  margin-left: 20px;
+}
+
+#notes {
+  margin-left: 75px;
+} 
+
+.auth-notes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+input[type="submit"] {
+  margin: 0 0 25px 135px;
+  left: 20px;
+}
+
+/* table section */
+  table {
+    width: auto;
+    table-layout: auto;
+    margin-left: 12rem;
+    font-size: 20px;
+    border: 1px solid white;
+    background-color: rgb(87, 91, 95);
+  }
+  
+  th {
+    background-color:rgb(69, 83, 153);
+    padding: 5px 20px;
+  }
+  
+  td {
+    font-size: 17px;
+    padding: 5px 20px;
+  }
+  
+  .all-books tr:nth-child(even) {
+    background-color: #9c9898;
+  }
+  .all-books tr:hover {
+    background-color: rgb(69, 83, 153);
+  }

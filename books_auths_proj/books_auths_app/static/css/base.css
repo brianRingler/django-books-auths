@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px dotted rgb(234, 0, 255); */
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b38;
+    color: white;
+    
+}
+
+
+/* Input fields */
+input[type="text"], 
+textarea, 
+select  {
+    border-radius: 25px;
+    border: 2px solid rgb(10, 32, 143,.5);
+    padding: 6px 12px;
+    margin-bottom: 20px;
+    height: 2.5rem;
+    width: 24rem;
+    font-size: 1.0rem;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+  }
+  
+  input[type="text"]:focus, 
+  textarea:focus, 
+  select:focus {
+    background-color: rgba(204,230,255,1);
+    /* offset-x | offset-y | blur-rad | color */
+    box-shadow: 5px -5px 5px #555 inset;
+  }
+
+
+/*  Buttons */
+input[type="submit"],
+button {   
+    height: 2.25rem;
+    width: 8rem;
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin: 25px 0 10px 25px;
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color:rgb(69, 83, 153);
+    color: white;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    color: rgba(10, 32, 143);
+    border: 1px solid rgb(69, 83, 153);
+    background: rgba(235, 235, 240, 0.548);
+}
+
+button {
+    background: rgba(235, 235, 240, 0.548);
+    border: 1px solid rgb(10, 32, 143);
+    color: rgb(10, 32, 143);
+}
+
+button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(10, 32, 143);
+}
+
+
+
+

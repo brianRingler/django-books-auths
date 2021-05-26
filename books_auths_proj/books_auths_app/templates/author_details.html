@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Books & Authors{% endblock %} 
+
+
+{% block content %}
+
+<form action="/add-book-auth/" method="POST" name="add-book-auth-frm" class="auth-details-wrapper">
+    {% csrf_token %}
+    <div class="auth-details">
+        <p class="auth-title">{{ author_details.first_name }} {{ author_details.last_name }}</p>
+        <input type="hidden" name="auth-id" value="{{ author_details.id }}" />
+        <p class="id-auth">ID:<span>{{ author_details.id }}</span></p>
+        <div class="desc-wrapper">
+            <label for="auth-desc">Notes</label>
+            <textarea name="auth-description" id="auth-desc" cols="55" rows="10">{{ author_details.notes }}</textarea>
+        </div>
+    </div>
+
+    <div class="book-for-auth">
+        <ul>
+            <li><h3>Books</h3></li>
+            {% for book in books_for_auth %}
+                <li class="book">{{ book.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="selected-book">
+        <select name="books">
+            {% for book in all_books %}
+                <option name="books" value="{{ book.id }}">
+                    {{ book.title }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" id="add-book-btn" value="Add">
+    </div>
+</form>
+
+
+{% endblock %}

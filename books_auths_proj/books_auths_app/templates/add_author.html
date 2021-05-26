@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Books & Authors{% endblock %} 
+
+
+{% block content %}
+
+<div class="add-author-wrapper">
+    
+
+    <form action="/add-author/" method="POST" name="add-author-frm">
+        <h1>Add a Author</h1>
+        {% csrf_token %}
+
+        <div class="firt-name">
+            <label for="first-name">First Name</label>
+            <input type="text" name="auth-first" id="first-name">
+        </div>
+
+        <div class="last-name">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="auth-last" id="last-name">
+        </div>
+
+        <div class="auth-notes">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="new-auth-notes" maxlength="250" rows="10" cols="12" placeholder="Provide some notes about this author" ></textarea>
+        </div>
+
+        <input type="submit" id="add-auth-btn" value="Add">
+    </form>
+
+    <div class="auth-table">
+        <table class="auth-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody class="all-books">
+                <tr>
+                    {% for author in all_authors %}
+                        <tr>
+                            <td>{{ author.id }}</td>
+                            <td>{{ author.first_name }} {{ author.last_name }}</td>
+                            <td><a href="author-details/{{ author.id }}">View</a></td>
+                        </tr>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+{% endblock %}
